@@ -1,0 +1,61 @@
+<Html>
+    <head>
+<title>document</title>
+<link rel="stylesheet" href="assets/css/web.css">
+        <body>
+<div id="container">
+    <div id="editor">
+        <textarea id="html" placeholder="write Html  here"></textarea>
+        <textarea id="css" placeholder="write css here"></textarea>
+        <textarea id="js" placeholder="write js  here"></textarea>
+        
+    </div>
+    <div id="preview">
+        <iframe id="output" srcdoc=""></iframe>
+        
+    </div>
+
+</div>
+<button id="save">save</button>
+
+<script>
+    // get the elemments
+
+    var html=document.getElementById("html");
+    var css=document.getElementById("css");
+    var js=document.getElementById("js");
+
+    var output=document.getElementById("output");
+
+    var save=document.getElementById("save");
+
+    function funOutPut(){
+
+        var html_value=html.value;
+        var css_value=css.value;
+        var js_value=js.value;
+
+
+       // window.alert(code_value);
+
+        var doc=output.contentDocument || output.contentWindow.document;
+
+
+        doc.open();
+        doc.write( html_value);
+        doc.write("<style>" + css_value + "</style>");
+        doc.close();
+
+       output.contentWindow.eval(js_value); 
+    }
+    funOutPut();
+
+    html.addEventListener('input', funOutPut);
+    css.addEventListener('input', funOutPut);
+    js.addEventListener('input', funOutPut);
+
+</script>
+
+        </body>
+    </head>
+</Html>

@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+}
+.container{
+    display: block;
+    margin: 0;
+}
+.row{
+    display: table;
+
+}
+
+.column{
+    float: left;
+    height: 330px;
+}
+
+.right{
+float: right;
+width: 85%;
+}
+
+.left{
+    width: 15%;
+    background-color: #f1f1f1;
+    height: 100%;
+    position: fixed;
+}
+
+/*navigation style*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+nav li a{
+    display: block;
+    padding: 8px 20%;
+    color: #000;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    background-color: #555;
+    color: white;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.section {
+    margin: 5%;
+  }
+
